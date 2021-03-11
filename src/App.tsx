@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Menu from './components/menu/Menu';
+import Clock from './components/clock/Clock';
 
 function App() {
+
+  const [status, setStatus] = useState<'MENU' | 'CLOCK'>('MENU');
+
+  const [time, setTime] = useState<number>(0);
+  const [increment, setIncrement] = useState<number>(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        status === 'MENU' ?
+          <Menu 
+            setStatus={setStatus} 
+            setTime={setTime}
+            setIncrement={setIncrement}
+            />
+          :
+          <Clock time={time} increment={increment} />
+      }
     </div>
   );
 }
