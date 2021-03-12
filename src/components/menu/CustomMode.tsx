@@ -12,8 +12,8 @@ const CustomMode = (props: IProps) => {
     const [temporalIncrement, setTemporalIncrement] = useState<number>(0);
 
     return (
-        <div className='menuCustomMode align-items-center'>
-            <h5>Customize your game</h5>
+        <div className='menuCustomMode col-12 col-sm-10 col-md-8 col-xl-6 align-items-center'>
+            <h5>Customize your timer</h5>
             <div className="form-group row">
                 <label className='text-right col-4 col-form-label' htmlFor="inputTime">Time:</label>
                 <input type="number" min='1' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {

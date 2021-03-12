@@ -1,0 +1,39 @@
+.menuClassicMode{
+    box-sizing: border-box;
+    color: #abb3b2;
+    background-color: #272522;
+    padding: 1em;
+    border-radius: 5px;
+
+    .buttonFirst, .buttonMiddle, .buttonLast {
+        width: 30%;
+        background-color: #abb3b2;
+        color: #272522;
+        padding: 2% 0%;
+        border-radius: 5px;
+    }
+
+    .buttonFirst{
+        margin-left: 3%;
+    }
+
+    .buttonMiddle{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .buttonLast{
+        margin-right: 3%;
+    }
+
+    .buttonForCustom{
+        width: 94%;
+        margin-top: 1%;
+        margin-left: 3%;
+        margin-right: 3%;
+        background-color: #abb3b2;
+        color: #272522;
+        padding: 2% 0%;
+        border-radius: 5px;
+    }
+}
