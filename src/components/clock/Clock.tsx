@@ -13,7 +13,7 @@ const Clock = (props: IClockProps) => {
     const [whiteTime, setWhiteTime] = useState<number>(props.time * 60*10);
     const [blackTime, setBlackTime] = useState<number>(props.time * 60*10);
 
-    let timeout:any;
+    let timeout:NodeJS.Timeout;
     useEffect(() => {
         if (started) {
             // eslint-disable-next-line

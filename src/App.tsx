@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import './assets/css/app.scss';
+
 import Menu from './components/menu/Menu';
 import Clock from './components/clock/Clock';
 

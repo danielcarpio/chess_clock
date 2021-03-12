@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+html, body {
+    background-color: #312e2b;
+}
+
+html, body, #root, .App{
+    height: 100%;
+}
