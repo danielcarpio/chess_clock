@@ -8,7 +8,7 @@ import Clock from './components/clock/Clock';
 
 function App() {
 
-  const [status, setStatus] = useState<'MENU' | 'CLOCK'>('MENU');
+  const [status, setStatus] = useState<'MENU' | 'CLOCK' | 'END_GAME' | 'WHITE_NO_TIME' | 'BLACK_NO_TIME'>('MENU');
 
   const [time, setTime] = useState<number>(0);
   const [increment, setIncrement] = useState<number>(0);
@@ -22,8 +22,20 @@ function App() {
             setTime={setTime}
             setIncrement={setIncrement}
             />
-          :
-          <Clock time={time} increment={increment} />
+        :
+        status === 'CLOCK' ?
+          <Clock setStatus={setStatus} time={time} increment={increment} />
+        :
+        status === 'END_GAME' ?
+          <p>End game</p>
+        :
+        status === 'WHITE_NO_TIME' ? 
+          <p>White no time</p>
+        :
+        status === 'BLACK_NO_TIME' ?
+          <p>Black no time</p>
+        :
+        null
       }
     </div>
   );

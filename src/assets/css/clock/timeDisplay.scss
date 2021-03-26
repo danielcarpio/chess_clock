@@ -1,0 +1,80 @@
+.timeDisplay.rotated{
+    transform: rotate(180deg);
+}
+
+.timeDisplay{
+    text-align: center;
+    padding-top: 1%;
+    height: 45%;
+
+    .clock{
+        font-family: 'Digital Webfont';
+        color: white;
+        background-color: #1b1b1b;
+        border: 1px solid black;
+        height: 45%;
+        padding-bottom: 1%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            margin-block-end: 0;
+            font-size: 20vmin;
+        }
+    }
+
+    .clock.running{
+        animation: blinker 2s linear infinite;
+        
+        @keyframes blinker {
+            50% {
+                color: transparent;
+            }
+        }
+    }
+
+    .changeTurn{
+        width: 100%;
+        height: 45%;
+
+        .changeTurnButton{
+            width: 100%;
+            height: 100%;
+
+            border: 1px solid rgb(0, 0, 0);
+            border-top: 0;
+
+            // Colors
+            $bg-color: gray;
+            $dot-color: black;
+
+            // Dimensions
+            $dot-size: 1px;
+            $dot-space: 5px;
+
+            background:
+		        linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+	        	linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;
+        	background-size: $dot-space $dot-space;
+            box-shadow: inset 0 0 1px 7px #353535;
+        }
+
+        .changeTurnButton.pressed{
+            // Colors
+            $bg-color-pressed: #272727;
+            $dot-color-pressed: black;
+
+            // Dimensions
+            $dot-size-pressed: 1px;
+            $dot-space-pressed: 5px;
+
+            background:
+                linear-gradient(90deg, $bg-color-pressed ($dot-space-pressed - $dot-size-pressed), transparent 1%) center,
+                linear-gradient($bg-color-pressed ($dot-space-pressed - $dot-size-pressed), transparent 1%) center, $dot-color-pressed;
+            background-size: $dot-space-pressed $dot-space-pressed;
+            box-shadow: none;
+            
+        }
+    }
+}

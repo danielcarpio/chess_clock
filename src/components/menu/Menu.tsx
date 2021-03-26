@@ -4,7 +4,7 @@ import CustomMode from './CustomMode';
 import ClassicMode from './ClassicMode';
 
 interface IMenuProps {
-    setStatus: React.Dispatch<React.SetStateAction<'MENU' | 'CLOCK'>>,
+    setStatus: React.Dispatch<React.SetStateAction<'MENU' | 'CLOCK' | 'END_GAME' | 'WHITE_NO_TIME' | 'BLACK_NO_TIME'>>,
     setTime: React.Dispatch<React.SetStateAction<number>>,
     setIncrement: React.Dispatch<React.SetStateAction<number>>
 }
