@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import './assets/css/app.scss';
+import './assets/fonts/digital_font/digital-7-fonts.css';
 
 import Menu from './components/menu/Menu';
 import Clock from './components/clock/Clock';
