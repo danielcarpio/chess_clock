@@ -1,4 +1,4 @@
-### Chess clock web app
+# Chess clock web app
 Chess clock web app designed for a better experience with phones. To start, select the time both users will start with and the increment (seconds that will be added after every movement).
 
 <img src="./readme_images/menu.jpg" width="300" />
