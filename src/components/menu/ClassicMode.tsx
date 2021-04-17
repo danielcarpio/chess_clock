@@ -10,6 +10,10 @@ interface IProps{
 const ClassicMode = (props: IProps)=>{
     return (
         <div className='menuClassicMode col-12 col-sm-10 col-md-8 col-xl-6 align-items-center'>
+            <div className='hideWhenSmall'>
+                <h4>Chess clock web app designed for a better experiences with phones. To start, select the time both users will start with and the increment (seconds that will be added after every movement)</h4>
+                <hr/>
+            </div>
             <h5>Select timer</h5>
             <div className='row'>
                 <button onClick={_=>props.selectTimeFunction(30, 0)} className='buttonFirst'>30&nbsp;min</button>

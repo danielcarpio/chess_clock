@@ -27,7 +27,15 @@ const TimeDisplay = (props: IProps)=>{
     return (
         <div className={'timeDisplay' + rotatedClass}>
             <div className={'clock' + clockRunningClass}>
-                <p>{getTimeFormatted(props.time)}</p>
+                {
+                    props.started ?
+                    <p>{getTimeFormatted(props.time)}</p>
+                    :
+                    props.rotated ?
+                    <p>Black</p>
+                    :
+                    <p>White</p>
+                }
             </div>
             <div className='changeTurn'>
                 {  

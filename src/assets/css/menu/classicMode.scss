@@ -1,3 +1,9 @@
+@media only screen and (max-height: 500px){
+    .menuClassicMode .hideWhenSmall {
+        display: none;
+    }
+}
+
 .menuClassicMode{
     box-sizing: border-box;
     color: #abb3b2;

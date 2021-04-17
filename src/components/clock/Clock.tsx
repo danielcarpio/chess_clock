@@ -37,6 +37,7 @@ const Clock = (props: IClockProps) => {
     }
     if(blackTime === 0){
         props.setStatus('BLACK_NO_TIME');
+        return null;
     }
 
     const changeTurn = () => {
