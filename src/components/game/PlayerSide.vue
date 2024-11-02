@@ -30,7 +30,7 @@ const { secondsRemaining, pieces, isItsTurn } = defineProps({
 });
 const emits = defineEmits(["pressed"]);
 
-const imgSrc = "src/assets/chess-pawn.svg";
+const imgSrc = new URL("../../assets/chess-pawn.svg", import.meta.url).href;
 
 const minutes = computed(() => Math.floor(secondsRemaining / 60));
 const seconds = computed(() => secondsRemaining - minutes.value * 60);

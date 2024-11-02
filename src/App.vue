@@ -20,7 +20,7 @@ body {
   width: 100vw;
   height: 100vh;
 
-  background: #ffffff url("src/assets/background.png") center center/cover
+  background: #ffffff url("@/assets/background.png") center center/cover
     no-repeat;
 }
 

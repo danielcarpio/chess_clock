@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-const imgSource = "src/assets/logo.svg";
+const imgSource = new URL("../../assets/logo.svg", import.meta.url).href;
 </script>
 
 <style lang="css" scoped>
